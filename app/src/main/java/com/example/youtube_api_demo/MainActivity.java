@@ -7,14 +7,23 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
-public class MainActivity extends AppCompatActivity implements YouTubePlayer.OnInitializedListener {
+public class MainActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
     private YouTubePlayerView youTubePlayerView;
     private String API_KEY = "AIzaSyCMLslK7mfeQBwdWogIrbV-iSIqSiFpLXY";
     private int REQUEST_VIDEO = 1;
+
+
+
+    //file này t ko làm gì cả chỉ lấy key api ra dùng thôi
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
