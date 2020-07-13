@@ -11,7 +11,7 @@ import retrofit2.http.Url;
 public class YoutubeAPI  {
     public static final String BASE_URL="https://www.googleapis.com/youtube/v3/";
     public static final String KEY="AIzaSyCMLslK7mfeQBwdWogIrbV-iSIqSiFpLXY";
-    public static final String sch="search?";
+    public static final String sch="search?key=";
     public static final String mx="&maxResults=10";
     public static final String ord="&order=date";
     public static final String part="&part=snippet";
@@ -26,12 +26,12 @@ public class YoutubeAPI  {
 //    Cái này là để dùng retrofit search video
     private static HomeVideo homeVideo=null;
     public static HomeVideo getHomeVideo(){
-        if(homeVideo==null){
-            Retrofit retrofit=new Retrofit.Builder()
+        if(homeVideo == null){
+            Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
-            homeVideo=retrofit.create(HomeVideo.class);
+            homeVideo = retrofit.create(HomeVideo.class);
         }
         return homeVideo;
     }
